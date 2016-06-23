@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="IntegerDataTypes/IntegerDataTypes.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IntegerDataTypes/Program.cs">
+    <Files>
+      <File FileName="IntegerDataTypes/Program.cs" Line="32" Column="7" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.IntegerDataTypes PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jumar/workspace/games/xamarin/BeginningGameProgrammingWithCSharp/IntegerDataTypes/IntegerDataTypes/Program.cs" line="32" column="36" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
