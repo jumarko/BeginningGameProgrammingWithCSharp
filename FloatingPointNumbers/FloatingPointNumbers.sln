@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingPointNumbers", "FloatingPointNumbers\FloatingPointNumbers.csproj", "{67663B4D-A4D4-4FA9-9AC3-A52CD2064769}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67663B4D-A4D4-4FA9-9AC3-A52CD2064769}.Debug|x86.ActiveCfg = Debug|x86
+		{67663B4D-A4D4-4FA9-9AC3-A52CD2064769}.Debug|x86.Build.0 = Debug|x86
+		{67663B4D-A4D4-4FA9-9AC3-A52CD2064769}.Release|x86.ActiveCfg = Release|x86
+		{67663B4D-A4D4-4FA9-9AC3-A52CD2064769}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
