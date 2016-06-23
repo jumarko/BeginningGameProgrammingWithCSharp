@@ -1,0 +1,5 @@
+*.exe
+*.exe.mdb
+bin
+obj
+
