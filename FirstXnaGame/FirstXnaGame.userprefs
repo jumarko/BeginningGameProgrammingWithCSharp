@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="FirstXnaGame/FirstXnaGame.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FirstXnaGame/Game1.cs">
+    <Files>
+      <File FileName="FirstXnaGame/Game1.cs" Line="58" Column="29" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FirstXnaGame PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>/Users/jumar/workspace/games/xamarin/BeginningGameProgrammingWithCSharp/FirstXnaGame/FirstXnaGame/Content/graphics/teddybear0.png</SourceFile>
+  <SourceTime>2016-07-01T10:44:46+02:00</SourceTime>
+  <DestFile>/Users/jumar/workspace/games/xamarin/BeginningGameProgrammingWithCSharp/FirstXnaGame/FirstXnaGame/Content/graphics/teddybear0.xnb</DestFile>
+  <DestTime>2016-07-05T09:48:32+02:00</DestTime>
+  <Importer>TextureImporter</Importer>
+  <ImporterTime>2015-04-29T19:13:03+02:00</ImporterTime>
+  <Processor>TextureProcessor</Processor>
+  <ProcessorTime>2015-04-29T19:13:03+02:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

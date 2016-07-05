@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="IntroToXna/IntroToXna.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IntroToXna/Game1.cs">
+    <Files>
+      <File FileName="IntroToXna/Game1.cs" Line="76" Column="30" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.IntroToXna PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
