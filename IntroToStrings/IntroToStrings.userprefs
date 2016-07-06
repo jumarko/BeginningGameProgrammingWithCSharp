@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="IntroToStrings/IntroToStrings.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IntroToStrings/IntroToStrings.cs">
+    <Files>
+      <File FileName="IntroToStrings/IntroToStrings.cs" Line="18" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.IntroToStrings PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
