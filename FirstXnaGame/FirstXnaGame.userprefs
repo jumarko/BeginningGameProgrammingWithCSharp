@@ -1,8 +1,19 @@
 ﻿<Properties StartupItem="FirstXnaGame/FirstXnaGame.csproj">
   <MonoDevelop.Ide.Workbench ActiveDocument="FirstXnaGame/Game1.cs">
     <Files>
-      <File FileName="FirstXnaGame/Game1.cs" Line="58" Column="29" />
+      <File FileName="FirstXnaGame/Game1.cs" Line="99" Column="15" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FirstXnaGame" expanded="True">
+            <Node name="FirstXnaGame" expanded="True">
+              <Node name="Game1.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

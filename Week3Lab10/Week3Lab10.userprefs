@@ -1,0 +1,28 @@
+﻿<Properties StartupItem="Week3Lab10/Week3Lab10.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Week3Lab10/Game1.cs">
+    <Files>
+      <File FileName="Week3Lab10/Game1.cs" Line="84" Column="52" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Week3Lab10" expanded="True">
+            <Node name="Week3Lab10" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Content" expanded="True">
+                <Node name="graphics" expanded="True" />
+              </Node>
+              <Node name="Game1.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.ItemProperties.Week3Lab10 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

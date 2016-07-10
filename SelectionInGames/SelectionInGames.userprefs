@@ -1,0 +1,26 @@
+﻿<Properties StartupItem="SelectionInGames/SelectionInGames.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SelectionInGames/Explosion.cs">
+    <Files>
+      <File FileName="SelectionInGames/Main.cs" Line="31" Column="29" />
+      <File FileName="SelectionInGames/Game1.cs" Line="88" Column="17" />
+      <File FileName="SelectionInGames/Explosion.cs" Line="64" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SelectionInGames" expanded="True">
+            <Node name="SelectionInGames" expanded="True">
+              <Node name="Explosion.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.SelectionInGames PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

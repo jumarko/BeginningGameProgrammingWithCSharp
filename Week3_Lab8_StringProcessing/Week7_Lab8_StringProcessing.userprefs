@@ -1,0 +1,11 @@
+﻿<Properties StartupItem="Week7_Lab8_StringProcessing/Week3_Lab8_StringProcessing.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Week7_Lab8_StringProcessing/Program.cs">
+    <Files>
+      <File FileName="Week7_Lab8_StringProcessing/Program.cs" Line="30" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Week3__Lab8__StringProcessing PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
