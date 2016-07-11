@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="ProgrammingAssignment3/ProgrammingAssignment3.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProgrammingAssignment3/Rock.cs">
+    <Files>
+      <File FileName="ProgrammingAssignment3/Game1.cs" Line="117" Column="5" />
+      <File FileName="ProgrammingAssignment3/Rock.cs" Line="23" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jumar/workspace/games/xamarin/BeginningGameProgrammingWithCSharp/ProgrammingAssignment3Materials/Mac/ProgrammingAssignment3/Game1.cs" line="86" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ProgrammingAssignment3 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
