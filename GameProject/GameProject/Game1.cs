@@ -95,6 +95,7 @@ namespace GameProject
 			burger = new Burger(Content, @"graphics\burger", 
 			                    GameConstants.WindowWidth / 2, GameConstants.WindowHeight * 7 / 8, 
 			                    null);
+			SpawnBear();
 
 			// set initial health and score strings
 		}
@@ -212,15 +213,23 @@ namespace GameProject
 		private void SpawnBear()
 		{
 			// generate random location
+			int randomX = GetRandomLocation(GameConstants.SpawnBorderSize, GameConstants.WindowWidth - 2 * GameConstants.SpawnBorderSize);
+			int randomY = GetRandomLocation(GameConstants.SpawnBorderSize, GameConstants.WindowHeight - 2 * GameConstants.SpawnBorderSize);
 
-			// generate random velocity
+			// generate random velocity vector
+			float randomSpeed = GameConstants.MinBearSpeed + RandomNumberGenerator.NextFloat(GameConstants.BearSpeedRange);
+			float randomAngle = RandomNumberGenerator.NextFloat((float) Math.PI);
+			float velocityX = (float) (Math.Cos(randomAngle) * randomSpeed);
+			float velocityY = (float) (Math.Sin(randomAngle) * randomSpeed);
+			Vector2 randomVelocity = new Vector2(velocityX, velocityY);
 
 			// create new bear
+			TeddyBear bear = new TeddyBear(Content, @"graphics/teddybear", randomX, randomY, randomVelocity, null, null);
 
 			// make sure we don't spawn into a collision
 
 			// add new bear to list
-
+			bears.Add(bear);
 		}
 
 		/// <summary>
