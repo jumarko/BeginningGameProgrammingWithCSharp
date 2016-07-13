@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="GameProject/GameProject.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameProject/Game1.cs">
+    <Files>
+      <File FileName="GameProject/Game1.cs" Line="95" Column="53" />
+      <File FileName="GameProject/Burger.cs" Line="44" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.GameProject PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
