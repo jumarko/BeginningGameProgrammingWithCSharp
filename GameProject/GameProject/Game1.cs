@@ -1,14 +1,10 @@
-﻿#region Using Statements
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Input;
-
-#endregion
 
 namespace GameProject
 {
@@ -53,10 +49,10 @@ namespace GameProject
 		SoundEffect teddyBounce;
 		SoundEffect teddyShot;
 
-		public Game1 ()
+		public Game1()
 		{
-			graphics = new GraphicsDeviceManager (this);
-			Content.RootDirectory = "Content";	            
+			graphics = new GraphicsDeviceManager(this);
+			Content.RootDirectory = "Content";
 
 			// set resolution
 			graphics.PreferredBackBufferWidth = GameConstants.WindowWidth;
@@ -69,35 +65,45 @@ namespace GameProject
 		/// related content.  Calling base.Initialize will enumerate through any components
 		/// and initialize them as well.
 		/// </summary>
-		protected override void Initialize ()
+		protected override void Initialize()
 		{
 			RandomNumberGenerator.Initialize();
 
-			base.Initialize ();
+			base.Initialize();
 		}
 
 		/// <summary>
 		/// LoadContent will be called once per game and is the place to load
 		/// all of your content.
 		/// </summary>
-		protected override void LoadContent ()
+		protected override void LoadContent()
 		{
 			// Create a new SpriteBatch, which can be used to draw textures.
-			spriteBatch = new SpriteBatch (GraphicsDevice);
+			spriteBatch = new SpriteBatch(GraphicsDevice);
 
-			// load audio content
+			// load audio content                     
 
 			// load sprite font
 
 			// load projectile and explosion sprites
 
 			// add initial game objects
-			burger = new Burger(Content, @"graphics\burger", 
-			                    GameConstants.WindowWidth / 2, GameConstants.WindowHeight * 7 / 8, 
-			                    null);
+
+			burger = new Burger(Content, @"graphics\burger",
+				(graphics.PreferredBackBufferWidth / 2), (graphics.PreferredBackBufferHeight * 7 / 8), null);
+
 			SpawnBear();
 
 			// set initial health and score strings
+		}
+
+		/// <summary>
+		/// UnloadContent will be called once per game and is the place to unload
+		/// game-specific content.
+		/// </summary>
+		protected override void UnloadContent()
+		{
+			// TODO: Unload any non ContentManager content here
 		}
 
 		/// <summary>
@@ -105,16 +111,10 @@ namespace GameProject
 		/// checking for collisions, gathering input, and playing audio.
 		/// </summary>
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
-		protected override void Update (GameTime gameTime)
+		protected override void Update(GameTime gameTime)
 		{
-			// For Mobile devices, this logic will close the Game when the Back button is pressed
-			// Exit() is obsolete on iOS
-			#if !__IOS__
-			if (GamePad.GetState (PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-			    Keyboard.GetState ().IsKeyDown (Keys.Escape)) {
-				Exit ();
-			}
-			#endif
+			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+				Exit();
 
 			// get current mouse state and update burger
 
@@ -153,14 +153,15 @@ namespace GameProject
 		/// This is called when the game should draw itself.
 		/// </summary>
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
-		protected override void Draw (GameTime gameTime)
+		protected override void Draw(GameTime gameTime)
 		{
-			graphics.GraphicsDevice.Clear (Color.CornflowerBlue);
+			GraphicsDevice.Clear(Color.CornflowerBlue);
 
 			spriteBatch.Begin();
 
 			// draw game objects
 			burger.Draw(spriteBatch);
+
 			foreach (TeddyBear bear in bears)
 			{
 				bear.Draw(spriteBatch);
@@ -212,24 +213,38 @@ namespace GameProject
 		/// </summary>
 		private void SpawnBear()
 		{
-			// generate random location
-			int randomX = GetRandomLocation(GameConstants.SpawnBorderSize, GameConstants.WindowWidth - 2 * GameConstants.SpawnBorderSize);
-			int randomY = GetRandomLocation(GameConstants.SpawnBorderSize, GameConstants.WindowHeight - 2 * GameConstants.SpawnBorderSize);
+			// generate random location            
+			int locationX;
+			locationX = GetRandomLocation(GameConstants.SpawnBorderSize,
+				graphics.PreferredBackBufferWidth - GameConstants.SpawnBorderSize);
 
-			// generate random velocity vector
-			float randomSpeed = GameConstants.MinBearSpeed + RandomNumberGenerator.NextFloat(GameConstants.BearSpeedRange);
-			float randomAngle = RandomNumberGenerator.NextFloat((float) Math.PI);
-			float velocityX = (float) (Math.Cos(randomAngle) * randomSpeed);
-			float velocityY = (float) (Math.Sin(randomAngle) * randomSpeed);
-			Vector2 randomVelocity = new Vector2(velocityX, velocityY);
+			int locationY;
+			locationY = GetRandomLocation(GameConstants.SpawnBorderSize,
+				graphics.PreferredBackBufferHeight - GameConstants.SpawnBorderSize);
+
+			// generate random velocity
+			float speed;
+			speed = RandomNumberGenerator.NextFloat(GameConstants.BearSpeedRange);
+
+			// angle
+			float angle;
+			angle = RandomNumberGenerator.NextFloat((float)Math.PI);
+
+			// random vector
+			Vector2 velocity = new Vector2(0, 0);
+			velocity.X = (float)Math.Cos(angle) * speed;
+			velocity.Y = (float)Math.Sin(angle) * speed;
 
 			// create new bear
-			TeddyBear bear = new TeddyBear(Content, @"graphics/teddybear", randomX, randomY, randomVelocity, null, null);
+
+			TeddyBear newBear = new TeddyBear(Content, @"graphics\teddybear",
+				locationX, locationY, velocity, null, null);
 
 			// make sure we don't spawn into a collision
 
 			// add new bear to list
-			bears.Add(bear);
+			bears.Add(newBear);
+
 		}
 
 		/// <summary>

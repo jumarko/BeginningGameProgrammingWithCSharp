@@ -1,11 +1,10 @@
 ﻿<Properties StartupItem="GameProject/GameProject.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameProject/TeddyBear.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameProject/Game1.cs">
     <Files>
-      <File FileName="GameProject/Game1.cs" Line="218" Column="4" />
-      <File FileName="GameProject/Burger.cs" Line="121" Column="1" />
+      <File FileName="GameProject/Game1.cs" Line="222" Column="23" />
+      <File FileName="GameProject/Burger.cs" Line="94" Column="12" />
       <File FileName="GameProject/Main.cs" Line="17" Column="14" />
-      <File FileName="GameProject/TeddyBear.cs" Line="142" Column="4" />
-      <File FileName="GameProject/GameConstants.cs" Line="28" Column="39" />
+      <File FileName="GameProject/GameConstants.cs" Line="28" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
