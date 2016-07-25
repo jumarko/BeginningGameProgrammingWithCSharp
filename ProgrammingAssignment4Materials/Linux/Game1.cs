@@ -1,5 +1,6 @@
 ﻿#region Using Statements
 using System;
+using System.Collections.Generic;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -8,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 
 #endregion
 
-namespace XnaMouseInput
+namespace ProgrammingAssignment4
 {
 	/// <summary>
 	/// This is the main type for your game.
@@ -21,28 +22,25 @@ namespace XnaMouseInput
 		const int WindowWidth = 800;
 		const int WindowHeight = 600;
 
-		// drawing support
-		Texture2D currentCharacter;
-		Rectangle drawRectangle;
+		// teddy support
+		Texture2D teddySprite;
+		TeddyBear teddy;
 
-		// random character support
-		Random rand = new Random();
-		// array for lesson 9.1
-		Texture2D[] characters = new Texture2D[4];
-		//Texture2D character0;
-		//Texture2D character1;
-		//Texture2D character2;
-		//Texture2D character3;
+		// pickup support
+		Texture2D pickupSprite;
+		List<Pickup> pickups = new List<Pickup>();
+
+		// click processing
+		bool rightClickStarted = false;
+		bool rightButtonReleased = true;
 
 		public Game1 ()
 		{
 			graphics = new GraphicsDeviceManager (this);
 			Content.RootDirectory = "Content";	            
 
-			// set resolution and make mouse visible
-			graphics.PreferredBackBufferWidth = WindowWidth;
-			graphics.PreferredBackBufferHeight = WindowHeight;
-			IsMouseVisible = true;	
+			// STUDENTS: set resolution and make mouse visible
+
 		}
 
 		/// <summary>
@@ -67,23 +65,11 @@ namespace XnaMouseInput
 			// Create a new SpriteBatch, which can be used to draw textures.
 			spriteBatch = new SpriteBatch (GraphicsDevice);
 
-			// load character sprites
-			//character0 = Content.Load<Texture2D>(@"graphics\character0");
-			//character1 = Content.Load<Texture2D>(@"graphics\character1");
-			//character2 = Content.Load<Texture2D>(@"graphics\character2");
-			//character3 = Content.Load<Texture2D>(@"graphics\character3");
+			// STUDENTS: load teddy and pickup sprites
 
-			// array for Lesson 9.1
-			characters[0] = Content.Load<Texture2D>(@"graphics\character0");
-			characters[1] = Content.Load<Texture2D>(@"graphics\character1");
-			characters[2] = Content.Load<Texture2D>(@"graphics\character2");
-			characters[3] = Content.Load<Texture2D>(@"graphics\character3");
 
-			// start character 0 in center of window
-			currentCharacter = characters[0];
-			drawRectangle = new Rectangle(WindowWidth / 2 - currentCharacter.Width / 2,
-				WindowHeight / 2 - currentCharacter.Height / 2,
-				currentCharacter.Width, currentCharacter.Height);
+			// STUDENTS: create teddy object centered in window
+
 		}
 
 		/// <summary>
@@ -100,31 +86,46 @@ namespace XnaMouseInput
 			    Keyboard.GetState ().IsKeyDown (Keys.Escape)) {
 				Exit ();
 			}
-#endif
+			#endif
 
-			// make character follow mouse
-			MouseState mouse = Mouse.GetState();
-			drawRectangle.X = mouse.X - currentCharacter.Width / 2;
-			drawRectangle.Y = mouse.Y - currentCharacter.Height / 2;
+			// STUDENTS: get current mouse state and update teddy
 
-			// clamp character in window
-			if (drawRectangle.Left < 0)
+
+			// check for right click started
+			if (mouse.RightButton == ButtonState.Pressed &&
+				rightButtonReleased)
 			{
-				drawRectangle.X = 0;
+				rightClickStarted = true;
+				rightButtonReleased = false;
 			}
-			if (drawRectangle.Right > WindowWidth)
+			else if (mouse.RightButton == ButtonState.Released)
 			{
-				drawRectangle.X = WindowWidth - drawRectangle.Width;
-			}
-			if (drawRectangle.Top < 0)
-			{
-				drawRectangle.Y = 0;
-			}
-			if (drawRectangle.Bottom > WindowHeight)
-			{
-				drawRectangle.Y = WindowHeight - drawRectangle.Height;
+				rightButtonReleased = true;
+
+				// if right click finished, add new pickup to list
+				if (rightClickStarted)
+				{
+					rightClickStarted = false;
+
+					// STUDENTS: add a new pickup to the end of the list of pickups
+
+
+					// STUDENTS: if this is the first pickup in the list, set teddy target
+
+				}
 			}
 
+			// check for collision between collecting teddy and targeted pickup
+			if (teddy.Collecting &&
+				teddy.CollisionRectangle.Intersects(pickups[0].CollisionRectangle))
+			{
+				// STUDENTS: remove targeted pickup from list (it's always at location 0)
+
+
+				// STUDENTS: if there's another pickup to collect, set teddy target
+                // If not, clear teddy target and stop the teddy from collecting
+
+			}
 
 			base.Update(gameTime);
 		}
@@ -137,9 +138,13 @@ namespace XnaMouseInput
 		{
 			graphics.GraphicsDevice.Clear (Color.CornflowerBlue);
 
-			// draw character
+			// draw game objects
 			spriteBatch.Begin();
-			spriteBatch.Draw(currentCharacter, drawRectangle, Color.White);
+			teddy.Draw(spriteBatch);
+			foreach (Pickup pickup in pickups)
+			{
+				pickup.Draw(spriteBatch);
+			}
 			spriteBatch.End();
 
 			base.Draw(gameTime);

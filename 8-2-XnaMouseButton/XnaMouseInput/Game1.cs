@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 
 #endregion
 
@@ -27,10 +28,17 @@ namespace XnaMouseInput
 
 		// random character support
 		Random rand = new Random();
-		Texture2D character0;
-		Texture2D character1;
-		Texture2D character2;
-		Texture2D character3;
+
+		// array for lesson 9.1
+		//Texture2D[] characters = new Texture2D[4];
+
+		// List for lesson 9.2
+		List<Texture2D> characters = new List<Texture2D>();
+
+		//Texture2D character0;
+		//Texture2D character1;
+		//Texture2D character2;
+		//Texture2D character3;
 
 		// click support
 		ButtonState previousButtonState = ButtonState.Released;
@@ -69,13 +77,19 @@ namespace XnaMouseInput
 			spriteBatch = new SpriteBatch (GraphicsDevice);
 
 			// load character sprites
-			character0 = Content.Load<Texture2D>(@"graphics\character0");
-			character1 = Content.Load<Texture2D>(@"graphics\character1");
-			character2 = Content.Load<Texture2D>(@"graphics\character2");
-			character3 = Content.Load<Texture2D>(@"graphics\character3");
+			//character0 = Content.Load<Texture2D>(@"graphics\character0");
+			//character1 = Content.Load<Texture2D>(@"graphics\character1");
+			//character2 = Content.Load<Texture2D>(@"graphics\character2");
+			//character3 = Content.Load<Texture2D>(@"graphics\character3");
+
+			// array for Lesson 9.1
+			characters.Add(Content.Load<Texture2D>(@"graphics\character0"));
+			characters.Add(Content.Load<Texture2D>(@"graphics\character1"));
+			characters.Add(Content.Load<Texture2D>(@"graphics\character2"));
+			characters.Add(Content.Load<Texture2D>(@"graphics\character3"));
 
 			// start character 0 in center of window
-			currentCharacter = character0;
+			currentCharacter = characters[0];
 			drawRectangle = new Rectangle(WindowWidth / 2 - currentCharacter.Width / 2,
 				WindowHeight / 2 - currentCharacter.Height / 2,
 				currentCharacter.Width, currentCharacter.Height);
@@ -125,22 +139,27 @@ namespace XnaMouseInput
 				&& previousButtonState == ButtonState.Pressed)
 			{
 				int characterNumber = rand.Next(4);
-				if (characterNumber == 0)
-				{
-					currentCharacter = character0;
-				}
-				else if (characterNumber == 1)
-				{
-					currentCharacter = character1;
-				}
-				else if (characterNumber == 2)
-				{
-					currentCharacter = character2;
-				}
-				else if (characterNumber == 3)
-				{
-					currentCharacter = character3;
-				}
+
+				// array for Lesson 9.1
+				currentCharacter = characters[characterNumber];
+
+
+				//if (characterNumber == 0)
+				//{
+				//	currentCharacter = character0;
+				//}
+				//else if (characterNumber == 1)
+				//{
+				//	currentCharacter = character1;
+				//}
+				//else if (characterNumber == 2)
+				//{
+				//	currentCharacter = character2;
+				//}
+				//else if (characterNumber == 3)
+				//{
+				//	currentCharacter = character3;
+				//}
 			}
 
 			previousButtonState = mouse.LeftButton;

@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="ProgrammingAssignment4/ProgrammingAssignment4.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProgrammingAssignment4/TeddyBear.cs">
+    <Files>
+      <File FileName="ProgrammingAssignment4/TeddyBear.cs" Line="117" Column="6" />
+      <File FileName="ProgrammingAssignment4/Game1.cs" Line="110" Column="9" />
+      <File FileName="ProgrammingAssignment4/Pickup.cs" Line="33" Column="50" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jumar/workspace/games/xamarin/BeginningGameProgrammingWithCSharp/ProgrammingAssignment4/ProgrammingAssignment4/TeddyBear.cs" line="121" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ProgrammingAssignment4 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
